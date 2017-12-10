@@ -1,5 +1,6 @@
 import * as IconTemplates from './iconTemplates';
 import iconAttributions from './iconAttributions';
+import iconChartMatrix from './iconChartMatrix';
 
 let ZipTemplate = IconTemplates.zip,
     DipTemplate = IconTemplates.dip,
