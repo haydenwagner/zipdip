@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Hayden Webpack Test</title>
+		<title>Zip Dip</title>
+        <link href="bin/styles.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<!-- <div id="app"></div> -->
 
 		<section id="app">
 		    <div id="top-axis">
+                <div></div><!--div for equal 5 column horizontal spacing-->
+                <div class="labels-top"><label>Zip</label></div>
+                <div class="labels-top"><label>Dip</label></div>
+                <div class="labels-top"><label>Potato Chip</label></div>
+                <div class="labels-top"><label>Miracle Whip</label></div>
 		    </div>
-		    <div id="left-axis">
-		    </div>
-		    <div id="chart-content">
-			<div>
-			</div>
+		    <!--<div id="left-axis">-->
+		    <!--</div>-->
+            <div id="chart-content">
+                <div id="row1">
+                    <div class="label"><label>Label Row&nbsp;1</label></div>
+                    <div id="zip"></div>
+                    <div id="dip"></div>
+                    <div id="potato-chip"></div>
+                    <div id="miracle-whip"></div>
+                </div>
 		    </div>
 		</section>
+        <footer>
+            <div class="spacer"></div>
+            <div id="icon-attributions">
+                <label>Icon Attributions</label>
+            </div>
+        </footer>
 
-		<script src="bin/app.bundle.js"></script>
+        <script src="bin/app.bundle.js"></script>
 	</body>
 </html>
