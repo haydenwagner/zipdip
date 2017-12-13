@@ -36,15 +36,23 @@ label {
   }
 }
 
-#row1{
-  display: flex;
-  justify-content: space-around;
-
-  & > div{
+#chart-content{
+  .row{
     display: flex;
-    flex:1;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    //margin-bottom: .5rem;
+    padding: 12px 0 10px;
+    
+    &:nth-child(odd){
+      background: #ddd;
+    }
+
+    & > div{
+      display: flex;
+      flex:1;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
@@ -53,7 +61,10 @@ footer{
   bottom: 0;
   width: 100%;
   display: flex;
-  margin: 1rem 0;
+  margin: 1rem 0 0;
+  padding: 1rem;
+  background: #ddd;
+  //color: white;
 
   .spacer{
     flex: 1 1 20%;
@@ -71,16 +82,13 @@ footer{
 
     div:not(.icon){
       margin-bottom: .5rem;
+      font-size: .75rem;
     }
     .icon{
       width: 20px;
       display: inline-block;
       margin-right: .33rem;
-      vertical-align: text-top;
-    }
-
-    a{
-      margin: 0 .33rem;
+      vertical-align: middle;
     }
   }
 }
