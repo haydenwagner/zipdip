@@ -11,13 +11,15 @@ let app = document.querySelector('#app'),
     topAxis = document.querySelector('#top-axis'),
     leftAxis = document.querySelector('#left-axis'),
     chartContent = document.querySelector('#chart-content'),
-    iconAttributionsEl = document.querySelector('#icon-attributions');
-
-    // zip = document.querySelector('#zip'), //these id selectors test only right now
+    iconAttributionsEl = document.querySelector('#icon-attributions'),
+    titleIcon = document.querySelector('#titleIcon'); //these id selectors test only right now
     // dip = document.querySelector('#dip'),
     // potatoChip = document.querySelector('#potato-chip'),
     // miracleWhip = document.querySelector('#miracle-whip'),
     // paperClip = document.querySelector('#paper-clip'),
+
+let titleIconTemplate = _.random(0,1,true) > .5 ? ZipTemplate : DipTemplate;
+titleIcon.insertAdjacentHTML('beforeend', titleIconTemplate);
 
 
     //PaperClipTemplate = IconTemplates.paperClip;
@@ -25,7 +27,7 @@ let app = document.querySelector('#app'),
 chartContent.insertAdjacentHTML('beforeend', makeChartContent());
 
 
-// zip.insertAdjacentHTML('beforeend', ZipTemplate);
+
 // zip.insertAdjacentHTML('beforeend', ZipTemplate);
 // zip.insertAdjacentHTML('beforeend', ZipTemplate);
 // zip.insertAdjacentHTML('beforeend', ZipTemplate);
