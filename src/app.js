@@ -19,12 +19,12 @@ let app = document.querySelector('#app'),
     // paperClip = document.querySelector('#paper-clip'),
 
 let titleIconTemplate = _.random(0,1,true) > .5 ? ZipTemplate : DipTemplate;
-titleIcon.insertAdjacentHTML('beforeend', titleIconTemplate);
+//titleIcon.insertAdjacentHTML('beforeend', titleIconTemplate);
 
 
     //PaperClipTemplate = IconTemplates.paperClip;
 
-chartContent.insertAdjacentHTML('beforeend', makeChartContent());
+// chartContent.insertAdjacentHTML('beforeend', makeChartContent());
 
 
 

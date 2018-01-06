@@ -2,30 +2,45 @@
 	<head>
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Zip Dip</title>
+		<title>ZIP&#128498;DIP</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-pink.min.css" />
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
         <link href="bin/styles.css" rel="stylesheet"/>
+
 	</head>
 	<body>
-		<!-- <div id="app"></div> -->
 
 		<div id="app">
-            <section class="blurb">
-                <h1>ZipDip<span id="titleIcon"></span>Me</h1>
-                <p>Use the chart below to discover how many zips, dips, potato chips, or maybe even miracle whips represent your current feeling or mood!</p>
+            <header>
+                <h2 class="header-title">ZIP<span id="titleIcon"></span>&#128498;DIP</h2>
+                <div id="info-icon-press-area">
+                    <i class="material-icons">info</i>
+                </div>
+            </header>
+
+            <section id="generated">
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <i class="material-icons">not_interested</i>
+                        <h2 class="mdl-card__title-text">No zips or dips!</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        You haven't made any zipdips yet! Click the button below to get started.
+                    </div>
+                </div>
+
+
             </section>
-		    <div id="top-axis">
-                <div></div><!--div for equal 5 column horizontal spacing-->
-                <div class="labels-top"><label>Zip</label></div>
-                <div class="labels-top"><label>Dip</label></div>
-                <div class="labels-top"><label>Potato Chip</label></div>
-                <div class="labels-top"><label>Miracle Whip</label></div>
-		    </div>
-		    <!--<div id="left-axis">-->
-		    <!--</div>-->
+            <div class="action-container">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent">
+                    <i class="material-icons">add</i>
+                </button>
+            </div>
+
             <div id="chart-content">
 		    </div>
 		</div>
-        <hr />
         <footer>
             <!--<div class="spacer"></div>-->
             <div id="icon-attributions">

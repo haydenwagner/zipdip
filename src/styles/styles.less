@@ -1,28 +1,42 @@
+@primary: #009688;
+@primary-light: #A7FFEB;
+@secondary: #ea1d62;
+
 body,
 html{
   margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+svg{
+  vertical-align: baseline;
 }
 
 *{
   box-sizing: border-box;
 }
 
-.blurb{
+header{
   margin-bottom: 2rem;
-  font: 1rem "Trebuchet MS", "Helvetica Neue", sans-serif;
-  line-height: 1.6;
+  background: @primary;
+  position: relative;
+  padding: .5rem 0;
+  //font-family :"Trebuchet MS", "Helvetica Neue", sans-serif;
+  //line-height: 1.6;
 
   path{
-    fill: #ddd;
+    //fill: #ddd;
   }
 
-
-  h1{
-    display: flex;
-    font-size: 2rem;
+  .header-title{
+    text-align: center;
     padding: .5rem 1rem;
-    margin: .5rem 0;
-    background: indianred;
+    margin: 0 0 .5rem 0;
+    //background: indianred;
     color: white;
 
     div.icon{
@@ -31,26 +45,19 @@ html{
     }
   }
 
-  p{
-    margin: .5rem 1rem 0 1rem;
-  }
-}
-
-#top-axis{
-  display: flex;
-  justify-content: space-around;
-  height: 2rem;
-  margin: 1rem 0 .5rem;
-
-  div{
-    display: flex;
-    flex: 1;
-    align-items: center;
+  #info-icon-press-area{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    i{
+      padding: 1rem;
+    }
   }
 }
 
 label {
-  font: bold 1rem "Trebuchet MS", "Helvetica Neue", sans-serif;
+  //font: bold 1rem "Trebuchet MS", "Helvetica Neue", sans-serif;
   text-align: center;
   width: 100%;
 }
@@ -65,37 +72,41 @@ label {
   }
 }
 
-#chart-content{
-  margin-bottom: 1.5rem;
+#generated{
+  display: flex;
+  justify-content: center;
 
-  .row{
-    display: flex;
-    justify-content: space-around;
-    //margin-bottom: .5rem;
-    padding: 12px 0 10px;
+  .mdl-card__title{
+    background: @primary-light;
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
     
-    &:nth-child(odd){
-      background: #ddd;
-    }
-
-    & > div{
-      display: flex;
-      flex:1;
-      justify-content: center;
-      align-items: center;
+    i{
+      color: #fff;
+      font-size: 140px;
+      position: absolute;
+      z-index: -1;
+      right: 0;
     }
   }
 }
 
+.action-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  button{
+
+  }
+}
+
 footer{
-  //position: absolute;
-  //bottom: 0;
   width: 100%;
   display: flex;
-  //margin: 1rem 0 0;
   padding: 1rem;
-  //background: #ddd;
   color: #333;
+  margin-top: auto;
 
   .spacer{
     flex: 1 1 20%;
