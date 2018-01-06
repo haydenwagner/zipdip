@@ -1,6 +1,7 @@
 const _ = require('lodash');
 import * as IconTemplates from './iconTemplates';
 import iconAttributions from './iconAttributions';
+import makeZipdipCard from './makeZipdipCard';
 
 let ZipTemplate = IconTemplates.zip,
     DipTemplate = IconTemplates.dip,
@@ -8,33 +9,20 @@ let ZipTemplate = IconTemplates.zip,
     MiracleWhipTemplate = IconTemplates.miracleWhip;
 
 let app = document.querySelector('#app'),
-    topAxis = document.querySelector('#top-axis'),
-    leftAxis = document.querySelector('#left-axis'),
-    chartContent = document.querySelector('#chart-content'),
-    iconAttributionsEl = document.querySelector('#icon-attributions'),
-    titleIcon = document.querySelector('#titleIcon'); //these id selectors test only right now
-    // dip = document.querySelector('#dip'),
-    // potatoChip = document.querySelector('#potato-chip'),
-    // miracleWhip = document.querySelector('#miracle-whip'),
-    // paperClip = document.querySelector('#paper-clip'),
+    titleIcon = document.querySelector('#titleIcon'), //these id selectors test only right now
+    nozipdips = document.querySelector('#no-zipdips'),
+    generated = document.querySelector('#generated'),
+    btnMakeZipdip = document.querySelector('#makeZipdip'),
+    iconAttributionsEl = document.querySelector('#icon-attributions');
+
+btnMakeZipdip.addEventListener('click', makeZipdip);
 
 let titleIconTemplate = _.random(0,1,true) > .5 ? ZipTemplate : DipTemplate;
 titleIcon.insertAdjacentHTML('beforeend', titleIconTemplate);
 
-
-    //PaperClipTemplate = IconTemplates.paperClip;
-
-// chartContent.insertAdjacentHTML('beforeend', makeChartContent());
-
-
-
-// zip.insertAdjacentHTML('beforeend', ZipTemplate);
-// zip.insertAdjacentHTML('beforeend', ZipTemplate);
-// zip.insertAdjacentHTML('beforeend', ZipTemplate);
-// dip.insertAdjacentHTML('beforeend', DipTemplate);
-// dip.insertAdjacentHTML('beforeend', DipTemplate);
-// potatoChip.insertAdjacentHTML('beforeend', PotatoChipTemplate);
-// miracleWhip.insertAdjacentHTML('beforeend', MiracleWhipTemplate);
-//paperClip.insertAdjacentHTML('beforeend', PaperClipTemplate);
+function makeZipdip(){
+    nozipdips.className += nozipdips.className ? ' hidden' : 'hidden';
+    generated.insertAdjacentHTML('beforeend', makeZipdipCard(2,2,0,0));
+}
 
 iconAttributionsEl.insertAdjacentHTML('beforeend', iconAttributions());
