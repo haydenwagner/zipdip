@@ -1,4 +1,5 @@
-@primary: #329584;
+@primary: #009688;
+@primary-light: #A7FFEB;
 @secondary: #ea1d62;
 
 body,
@@ -22,6 +23,8 @@ svg{
 header{
   margin-bottom: 2rem;
   background: @primary;
+  position: relative;
+  padding: .5rem 0;
   //font-family :"Trebuchet MS", "Helvetica Neue", sans-serif;
   //line-height: 1.6;
 
@@ -29,13 +32,7 @@ header{
     //fill: #ddd;
   }
 
-
-  h1{
-    //font-family: "Trebuchet MS", "Helvetica Neue", sans-serif;
-    //font-weight: bold;
-    //font-size: 30px;
-    //letter-spacing: initial;
-    //display: flex;
+  .header-title{
     text-align: center;
     padding: .5rem 1rem;
     margin: 0 0 .5rem 0;
@@ -48,8 +45,14 @@ header{
     }
   }
 
-  p{
-    margin: .5rem 1rem 0 1rem;
+  #info-icon-press-area{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    i{
+      padding: 1rem;
+    }
   }
 }
 
@@ -69,32 +72,30 @@ label {
   }
 }
 
-#chart-content{
-  margin-bottom: 1.5rem;
-
-  .row{
-    display: flex;
-    justify-content: space-around;
-    //margin-bottom: .5rem;
-    padding: 12px 0 10px;
-    
-    &:nth-child(odd){
-      background: #ddd;
-    }
-
-    & > div{
-      display: flex;
-      flex:1;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-}
-
 #generated{
   display: flex;
   justify-content: center;
 
+  .mdl-card__title{
+    background: @primary-light;
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
+    
+    i{
+      color: #fff;
+      font-size: 140px;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+    }
+  }
+}
+
+.action-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
   button{
 
   }
