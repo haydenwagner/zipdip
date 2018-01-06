@@ -1,12 +1,12 @@
+const _ = require('lodash');
 import * as IconTemplates from './iconTemplates';
 import iconAttributions from './iconAttributions';
-import makeChartContent from './makeChartContent';
-// import iconChartMatrix from './iconChartMatrix';
 
 let ZipTemplate = IconTemplates.zip,
     DipTemplate = IconTemplates.dip,
     PotatoChipTemplate = IconTemplates.potatoChip,
     MiracleWhipTemplate = IconTemplates.miracleWhip;
+
 let app = document.querySelector('#app'),
     topAxis = document.querySelector('#top-axis'),
     leftAxis = document.querySelector('#left-axis'),
