@@ -1,28 +1,45 @@
+@primary: #329584;
+@secondary: #ea1d62;
+
 body,
 html{
   margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+svg{
+  vertical-align: baseline;
 }
 
 *{
   box-sizing: border-box;
 }
 
-.blurb{
+header{
   margin-bottom: 2rem;
-  font: 1rem "Trebuchet MS", "Helvetica Neue", sans-serif;
-  line-height: 1.6;
+  background: @primary;
+  //font-family :"Trebuchet MS", "Helvetica Neue", sans-serif;
+  //line-height: 1.6;
 
   path{
-    fill: #ddd;
+    //fill: #ddd;
   }
 
 
   h1{
-    display: flex;
-    font-size: 2rem;
+    //font-family: "Trebuchet MS", "Helvetica Neue", sans-serif;
+    //font-weight: bold;
+    //font-size: 30px;
+    //letter-spacing: initial;
+    //display: flex;
+    text-align: center;
     padding: .5rem 1rem;
-    margin: .5rem 0;
-    background: indianred;
+    margin: 0 0 .5rem 0;
+    //background: indianred;
     color: white;
 
     div.icon{
@@ -36,21 +53,8 @@ html{
   }
 }
 
-#top-axis{
-  display: flex;
-  justify-content: space-around;
-  height: 2rem;
-  margin: 1rem 0 .5rem;
-
-  div{
-    display: flex;
-    flex: 1;
-    align-items: center;
-  }
-}
-
 label {
-  font: bold 1rem "Trebuchet MS", "Helvetica Neue", sans-serif;
+  //font: bold 1rem "Trebuchet MS", "Helvetica Neue", sans-serif;
   text-align: center;
   width: 100%;
 }
@@ -87,15 +91,21 @@ label {
   }
 }
 
+#generated{
+  display: flex;
+  justify-content: center;
+
+  button{
+
+  }
+}
+
 footer{
-  //position: absolute;
-  //bottom: 0;
   width: 100%;
   display: flex;
-  //margin: 1rem 0 0;
   padding: 1rem;
-  //background: #ddd;
   color: #333;
+  margin-top: auto;
 
   .spacer{
     flex: 1 1 20%;
