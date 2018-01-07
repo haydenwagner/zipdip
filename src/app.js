@@ -22,7 +22,7 @@ titleIcon.insertAdjacentHTML('beforeend', titleIconTemplate);
 
 function makeZipdip(){
     nozipdips.className += nozipdips.className ? ' hidden' : 'hidden';
-    generated.insertAdjacentHTML('beforeend', makeZipdipCard(2,2,0,0));
+    generated.insertAdjacentHTML('beforeend', makeZipdipCard(_.random(0,5,false),_.random(0,5,false),_.random(0,2,false),_.random(0,2,false)));
 }
 
 iconAttributionsEl.insertAdjacentHTML('beforeend', iconAttributions());

@@ -1,22 +1,27 @@
 <div class="mdl-card  mdl-shadow--2dp zipdip-card">
     <div class="mdl-card__title mdl-card--expand zipdip-card-icons">
         {{#if zipIcons}}
-            <div>
-                {{{zipIcons}}}
+            <div class="icon-number-label-group">
+                <div class="icon-group">
+                    {{{zipIcons}}}
+                </div>
+                <div>{{zipCount}}</div>
+                <div>zip{{#if zipGreaterThanOne}}s{{/if}}</div>
+                <!--<div>zip{#ifGreaterThanOne zipCount}s{/ifGreaterThanOne}</div>-->
             </div>
         {{/if}}
         {{#if dipIcons}}
-            <div>
+            <div class="icon-group">
                 {{{dipIcons}}}
             </div>
         {{/if}}
         {{#if potatoChipIcons}}
-            <div>
+            <div class="icon-group">
                 {{{potatoChipIcons}}}
             </div>
         {{/if}}
         {{#if miracleWhipIcons}}
-            <div>
+            <div class="icon-group">
                 {{{miracleWhipIcons}}}
             </div>
         {{/if}}
