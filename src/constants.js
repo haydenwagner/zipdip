@@ -1,8 +1,17 @@
 export default {
-    ICONS:{
-        ZIP: 'Zip',
-        DIP: 'Dip',
-        POTATO_CHIP: 'Potato Chip',
-        MIRACLE_WHIP: 'Miracle Whip'
+    ICONS: {
+        SCREEN_LABELS: {
+            ZIP: 'zip',
+            DIP: 'dip',
+            POTATO_CHIP: 'potato<br>chip',
+            MIRACLE_WHIP: 'miracle<br>whip'
+        },
+        TEMPLATE_NAMES: {
+            ZIP: 'zip',
+            DIP: 'dip',
+            POTATO_CHIP: 'potatoChip',
+            MIRACLE_WHIP: 'miracleWhip'
+        },
+
     }
 };
