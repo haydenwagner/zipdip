@@ -26,6 +26,11 @@ svg {
 
 .faded{
   background: gray;
+  -webkit-transition: background .5s;
+  -moz-transition: background .5s;
+  -ms-transition: background .5s;
+  -o-transition: background .5s;
+  transition: background .5s;
 }
 
 
@@ -97,13 +102,13 @@ header {
     }
   }
 
-  #generated{
+  .card-container{
     .zipdip-card:not(:last-of-type){
       margin-bottom: 1rem;
     }
 
     .zipdip-card-icons-area{
-      background: rgba(156,39,176,1);
+      //background: rgba(156,39,176,1);
     }
 
     .zipdip-card-icons-vertical-aligner{
@@ -158,9 +163,29 @@ header {
 }
 
 .action-container {
-  display: flex;
+  //display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin: 2rem auto 1rem;
+  width: 330px;
+
+  .mdl-button{
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  #recentlyGeneratedCounter{
+    visibility: hidden;
+    .down-arrow{
+      line-height: 35px;
+      float: right;
+    }
+    
+    .mdl-chip__contact{
+      float: left;
+    }
+  }
+
+
 }
 
 footer {

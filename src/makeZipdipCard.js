@@ -26,9 +26,6 @@ export default function makeZipdipCard(iconGroupCounts){
         let constKey = iconGroup.constKey,
             count = iconGroup.count;
 
-        console.log(constants.ICONS.TEMPLATE_NAMES[constKey]);
-        console.log(iconTemplates[constants.ICONS.TEMPLATE_NAMES[constKey]]);
-
         templateConfig.iconGroups.push({
             label: constants.ICONS.SCREEN_LABELS[constKey],
             count: count,

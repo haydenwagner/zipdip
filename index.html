@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <section id="generated">
+                <section id="currentCard" class="card-container">
 
                 </section>
 
@@ -40,7 +40,16 @@
                 <button id="makeZipdip" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent">
                     <i class="material-icons">add</i>
                 </button>
+                <span id="recentlyGeneratedCounter" class="mdl-chip mdl-chip--contact">
+                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white" id="generatedCounter">0</span>
+                    <span class="mdl-chip__text">Recently generated zipdip(s) </span><i class="material-icons down-arrow">keyboard_arrow_down</i>
+                </span>
+
             </div>
+
+            <section class="zipdip-content">
+                <section id="oldCard" class="card-container"></section>
+            </section>
 
 		</div>
         <footer>
