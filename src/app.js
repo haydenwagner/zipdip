@@ -28,6 +28,20 @@ btnMakeZipdip.addEventListener('click', makeZipdip);
 let titleIconTemplate = _.random(0,1,true) > .5 ? ZipTemplate : DipTemplate;
 titleIcon.insertAdjacentHTML('beforeend', titleIconTemplate);
 
+
+//dialog
+var dialog = document.querySelector('#info-dialog');
+var showDialogButton = document.querySelector('#info-icon-press-area');
+if (! dialog.showModal) {
+    dialogPolyfill.registerDialog(dialog);
+}
+showDialogButton.addEventListener('click', function() {
+    dialog.showModal();
+});
+dialog.querySelector('#close-info-dialog').addEventListener('click', function() {
+    dialog.close();
+});
+
 function makeZipdip(){
     let iconGroupCounts = [
         {
@@ -65,7 +79,7 @@ function makeZipdip(){
     // dips will be more consistent but more average (more 2s, 3s, and 4s than 1s and 5s)
     // potatochips will be based on the generated zips and dips and also some cyclic outside var (days of week/month, moon cycle etc.) and be limited to 3
     // miraclewhips will have a 1/100 chance (for now) and be limited to one per card
-    var zipdipCardContent = document.createElement('html');
+    var zipdipCardContent = document.createElement('div');
     zipdipCardContent.innerHTML = makeZipdipCard(iconGroupCounts);
     console.info(colors[_.random(0,colors.length - 1,false)]);
     zipdipCardContent.querySelector('.zipdip-card-icons-area').style.background = colors[_.random(0,colors.length - 1,false)];

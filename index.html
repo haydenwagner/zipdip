@@ -5,11 +5,29 @@
 		<title>ZIP&#128498;DIP</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-pink.min.css" />
+        <link rel="stylesheet" href="./node_modules/dialog-polyfill/dialog-polyfill.css" />
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script defer src="./node_modules/dialog-polyfill/dialog-polyfill.js"></script>
         <link href="bin/styles.css" rel="stylesheet"/>
 
 	</head>
 	<body>
+        <dialog class="mdl-dialog" id="info-dialog">
+            <h4 class="mdl-dialog__title">What is a zipdip?</h4>
+            <div class="mdl-dialog__content">
+                <p>Zipdips are amazing little zips and dips put together to make zipdips.</p>
+                <p>1 zip + 1 dip = 1 zipdip.</p>
+                <p>Many zips + many dips = 1 zipdip.</p>
+
+                <div id="icon-attributions">
+                    <label>Icon Attributions</label>
+                </div>
+            </div>
+            <div class="mdl-dialog__actions">
+                <!--<button type="button" class="mdl-button">Agree</button>-->
+                <button type="button" class="mdl-button close" id="close-info-dialog">Close</button>
+            </div>
+        </dialog>
 
 		<div id="app">
             <header>
