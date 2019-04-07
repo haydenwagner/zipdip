@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "build": "webpack --progress",
-    "build-watch": "webpack --watch --progress"
+    "build": "webpack --config webpack.server.config.js && webpack --progress",
+    "build-watch": "webpack --watch --progress",
+    "start": "node ./bin/server.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -16,7 +17,10 @@
     "less-loader": "^4.0.5",
     "lodash": "^4.17.4",
     "style-loader": "^0.18.2",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.5",
+    "webpack-node-externals": "^1.7.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
