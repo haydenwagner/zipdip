@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "build": "webpack --config webpack.server.config.js && webpack --progress",
-    "build-watch": "webpack --watch --progress",
-    "start": "node ./bin/server.js"
+    "build": "npm run copyIndex && webpack --config webpack.server.config.js && webpack --progress",
+    "build-watch": "npm run build",
+    "start": "node ./bin/server.js",
+    "copyIndex": "cp index.html bin/index.html"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
